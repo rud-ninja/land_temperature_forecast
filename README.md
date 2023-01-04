@@ -18,7 +18,9 @@ The dataset consists of recorded average temperatures over a monthly period acro
 There were a few missing values for recorded average temperature. These values have been imputed using forward fill (ffill) function in pandas.
 
 
+
 ## Figures and discussions
+
 
 ### Data exploration
 
@@ -50,6 +52,9 @@ Zooming into the above graph, we can visualise the actual change in temperature 
 
 **Fig 5: Monthly seasonality of land temperature values**
 
+
+
+
 ### Forecasts
 The first thing to consider when using ARIMA model for time series forecasts is the stationarity of the series. We make use of autocorrelation and partial autocorrelation plots along with p value tests like Augmented Dickey Fuller test to determine whether a time series is stationary. If they are not, they have to be made stationary first before models can be trained on them.
 
@@ -77,29 +82,33 @@ Critical Values:
   
 Now the p-value is less than 0.05 which means the series is now stationary and the ARIMA model can be trained on it.
 
-#### Long term forecasts
+
+
+## Long term forecasts
 For the forecasts, we have sliced the chunk of data for the decade starting at the year 2000. We will compare the efficacy of ARIMA model to forecast based on univariate data for long and short durations. For long term forecast we have chosen the last 2 years of our data chunk as the test set. The test set for short term forecasts are the last year of the decade and the remaining for training.
 
-City: Calcutta		MSE: 1.53
+City: Calcutta,		MSE: 1.53
 ![](https://github.com/rud-ninja/land_temperature_forecast/blob/main/new_images/lt_cal.png)
 
-City: London		MSE: 2.56
+City: London,		MSE: 2.56
 ![](https://github.com/rud-ninja/land_temperature_forecast/blob/main/new_images/lt_lon.png)
 
-City: Rio De Janeiro		MSE: 1.27
+City: Rio De Janeiro,		MSE: 1.27
 ![](https://github.com/rud-ninja/land_temperature_forecast/blob/main/new_images/lt_rdj.png)
 
-**Fig 7: Long term land temperature forecasts for the 3 cities. The plots on the left display the training and test size while the plots on the right display the actual vs predicted values and the 95% confidence interval for the same**
+**Fig 7: Long term land temperature forecast for the 3 cities. The plots on the left display the training and test size while the plots on the right display the actual vs predicted values and the 95% confidence interval for the same**
 
-#### Short term forecasts
 
-City: Calcutta		MSE: 1.32
+
+## Short term forecasts
+
+City: Calcutta,		MSE: 1.32
 ![](https://github.com/rud-ninja/land_temperature_forecast/blob/main/new_images/st_cal.png)
 
-City: London		MSE: 3.99
+City: London,		MSE: 3.99
 ![](https://github.com/rud-ninja/land_temperature_forecast/blob/main/new_images/st_lon.png)
 
-City: Rio De Janeiro		MSE: 1.46
+City: Rio De Janeiro,		MSE: 1.46
 ![](https://github.com/rud-ninja/land_temperature_forecast/blob/main/new_images/st_rdj.png)
 
-**Fig 8: Short term forecasts**
+**Fig 8: Short term temperature forecast**
