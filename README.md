@@ -25,11 +25,13 @@ There were a few missing values for recorded average temperature. These values h
 ### Data exploration
 
 ![](https://github.com/rud-ninja/land_temperature_forecast/blob/main/new_images/worldwide_temperature.png)
+
 **Fig 1: A Look at the temperature distribution over all the major cities in the dataset**
 
 We can see a skewed distribution leaning more towards warmer land temperatures. The vertical lines show the quartile ranges. For the remainder of the task, we have selected 3 cities lying on different latitudes for comparison of local temperature characteristics and will attempt to forecast their land temperatures for long and short periods. The cities selected are *Calcutta* that experiences tropical climate, *London* that experiences temperate climate and *Rio De Janeiro* that also experiences tropical climate but lies in the southern hemisphere.
 
 ![](https://github.com/rud-ninja/land_temperature_forecast/blob/main/new_images/citywise_temperatures.png)
+
 **Fig 2: Temperature distribution across the cities represented as histogram and boxplot**
 
 The histograms for Calcutta and London show a wide range of temperatures and a distinct difference in temperatures during summer and winter (evident from the two peaks) whereas the histogram for Rio De Janeiro is just like normal distribution with a single peak and a small spread (standard deviation). Along with that, we can see that Calcutta experiences more warmer temperatures than colder and London experiences almost equal amount of warm and cold climate. Rio De Janeiro remains warm almost all year round.
