@@ -78,18 +78,28 @@ Critical Values:
 Now the p-value is less than 0.05 which means the series is now stationary and the ARIMA model can be trained on it.
 
 #### Long term forecasts
-For the forecasts, we have sliced the chunk of data for the decade starting at the year 2000. We will compare the efficacy of ARIMA model to forecast based on univariate data for long and short durations. For long term forecast we have chosen the last 2 years of our data chunk as the test set. The test set for short term forecasts are the last 6 months of the decade and the remaining for training.
+For the forecasts, we have sliced the chunk of data for the decade starting at the year 2000. We will compare the efficacy of ARIMA model to forecast based on univariate data for long and short durations. For long term forecast we have chosen the last 2 years of our data chunk as the test set. The test set for short term forecasts are the last year of the decade and the remaining for training.
 
-![](https://github.com/rud-ninja/land_temperature_forecast/blob/main/new_images/longterm_cal.png)
-![](https://github.com/rud-ninja/land_temperature_forecast/blob/main/new_images/longterm_lon.png)
-![](https://github.com/rud-ninja/land_temperature_forecast/blob/main/new_images/longterm_rdj.png)
+City: Calcutta		MSE: 1.53
+![](https://github.com/rud-ninja/land_temperature_forecast/blob/main/new_images/lt_cal.png)
+
+City: London		MSE: 2.56
+![](https://github.com/rud-ninja/land_temperature_forecast/blob/main/new_images/lt_lon.png)
+
+City: Rio De Janeiro		MSE: 1.27
+![](https://github.com/rud-ninja/land_temperature_forecast/blob/main/new_images/lt_rdj.png)
 
 **Fig 7: Long term land temperature forecasts for the 3 cities. The plots on the left display the training and test size while the plots on the right display the actual vs predicted values and the 95% confidence interval for the same**
 
 #### Short term forecasts
 
-![](https://github.com/rud-ninja/land_temperature_forecast/blob/main/new_images/shortterm_cal.png)
-![](https://github.com/rud-ninja/land_temperature_forecast/blob/main/new_images/shortterm_lon.png)
-![](https://github.com/rud-ninja/land_temperature_forecast/blob/main/new_images/shortterm_rdj.png)
+City: Calcutta		MSE: 1.32
+![](https://github.com/rud-ninja/land_temperature_forecast/blob/main/new_images/st_cal.png)
+
+City: London		MSE: 3.99
+![](https://github.com/rud-ninja/land_temperature_forecast/blob/main/new_images/st_lon.png)
+
+City: Rio De Janeiro		MSE: 1.46
+![](https://github.com/rud-ninja/land_temperature_forecast/blob/main/new_images/st_rdj.png)
 
 **Fig 8: Short term forecasts**
