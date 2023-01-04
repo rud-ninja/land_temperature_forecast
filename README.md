@@ -40,7 +40,7 @@ Speaking of climate, an interesting thing to observe will be the gradual rise in
 
 **Fig 3: Trend of average land temperature since 1900 over a period of 10 years**
 
-Zooming into the above graph, we can visualise the actual change in temperature with time for the 3 cities. The seasonal nature is most consistent for Calcutta, followed by London and then Rio De Janeiro, for which there are wider variations even within the seasonal changes. This could be the reason why we saw a single peak for the temperature distribution of Rio De Janeiro. This could also mean that the temperature time series of Rio De Janeiro is stationary. In actuality, it is very close to stationary but is not.
+Zooming into the above graph, we can visualise the actual change in temperature with time for the 3 cities. The seasonal nature is most consistent for Calcutta, followed by London and then Rio De Janeiro, for which there are wider variations even within the seasonal changes. This could be the reason why we saw a single peak for the temperature distribution of Rio De Janeiro. This could also mean that the temperature time series of Rio De Janeiro is stationary. In actuality, it is very close to stationary but is not. On performing Augmented Dickey Fuller test, the p-value obtained for the original series was *0.0940642* and that for the 1st difference stage was *0.0113305*
 
 ![](https://github.com/rud-ninja/land_temperature_forecast/blob/main/new_images/temperature_vs_time.png)
 
@@ -55,7 +55,7 @@ The first thing to consider when using ARIMA model for time series forecasts is 
 
 ![](https://github.com/rud-ninja/land_temperature_forecast/blob/main/new_images/autocorrelation_london.png)
 
-**Fig 6: Plots of autocorrelation and partial aurocorrelation functions that demonstrate correlation between past and future values in the time series as a function of the time gap (or lag) between them. The above plot is for the city of London. The same has been performed for the remaining cities (not shown here).
+**Fig 6: Plots of autocorrelation and partial aurocorrelation functions that demonstrate correlation between past and future values in the time series as a function of the time gap (or lag) between them. The above plot is for the city of London. The same has been performed for the remaining cities (not shown here)**
 
 The above figure was followed by an AD fuller test whose resutls were as follows:
 
@@ -78,12 +78,13 @@ Critical Values:
 Now the p-value is less than 0.05 which means the series is now stationary and the ARIMA model can be trained on it.
 
 #### Long term forecasts
+For the forecasts, we have sliced the chunk of data for the decade starting at the year 2000. We will compare the efficacy of ARIMA model to forecast based on univariate data for long and short durations. For long term forecast we have chosen the last 2 years of our data chunk as the test set. The test set for short term forecasts are the last 6 months of the decade and the remaining for training.
 
 ![](https://github.com/rud-ninja/land_temperature_forecast/blob/main/new_images/longterm_cal.png)
 ![](https://github.com/rud-ninja/land_temperature_forecast/blob/main/new_images/longterm_lon.png)
 ![](https://github.com/rud-ninja/land_temperature_forecast/blob/main/new_images/longterm_rdj.png)
 
-**Fig 7: Long term land temperature forecasts for the 3 cities. The plots on the left display the training and test size while the plots on the right display the actual vs predicted values and the 95% confidence interval for the same.
+**Fig 7: Long term land temperature forecasts for the 3 cities. The plots on the left display the training and test size while the plots on the right display the actual vs predicted values and the 95% confidence interval for the same**
 
 #### Short term forecasts
 
@@ -91,4 +92,4 @@ Now the p-value is less than 0.05 which means the series is now stationary and t
 ![](https://github.com/rud-ninja/land_temperature_forecast/blob/main/new_images/shortterm_lon.png)
 ![](https://github.com/rud-ninja/land_temperature_forecast/blob/main/new_images/shortterm_rdj.png)
 
-**Fig 8: Short term forecasts
+**Fig 8: Short term forecasts**
