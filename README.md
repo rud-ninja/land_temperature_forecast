@@ -17,6 +17,7 @@ The dataset consists of recorded average temperatures over a monthly period acro
 #### Data Imputation:
 There were a few missing values for recorded average temperature. These values have been imputed using forward fill (ffill) function in pandas.
 
+
 ## Figures and discussions
 
 ### Data exploration
@@ -25,17 +26,21 @@ There were a few missing values for recorded average temperature. These values h
 
 **Fig 1: A Look at the temperature distribution over all the major cities in the dataset**
 
-We can see a skewed distribution leaning more towards warmer land temperatures. For the remainder of the task, we have selected 3 cities lying on different latitudes for comparison of local temperature characteristics and will attempt to forecast their land temperatures for long and short periods. The cities selected are *Calcutta* that experiences tropical climate, *London* that experiences temperate climate and *Rio De Janeiro* that also experiences tropical climate but lies in the southern hemisphere.
+We can see a skewed distribution leaning more towards warmer land temperatures. The vertical lines show the quartile ranges. For the remainder of the task, we have selected 3 cities lying on different latitudes for comparison of local temperature characteristics and will attempt to forecast their land temperatures for long and short periods. The cities selected are *Calcutta* that experiences tropical climate, *London* that experiences temperate climate and *Rio De Janeiro* that also experiences tropical climate but lies in the southern hemisphere.
 
 ![](https://github.com/rud-ninja/land_temperature_forecast/blob/main/new_images/citywise_temperatures.png)
 
 **Fig 2: Temperature distribution across the cities represented as histogram and boxplot**
 
-Speaking of climate, an interesting thing to observe will be the gradual rise in land temperature over the years. Below is a trend plot with a period of 10 years that shows that.
+The histograms for Calcutta and London show a wide range of temperatures and a distinct difference in temperatures during summer and winter (evident from the two peaks) whereas the histogram for Rio De Janeiro is just like normal distribution with a single peak and a small spread (standard deviation). Along with that, we can see that Calcutta experiences more warmer temperatures than colder and London experiences almost equal amount of warm and cold climate. Rio De Janeiro remains warm almost all year round.
+
+Speaking of climate, an interesting thing to observe will be the gradual rise in land temperature over the years. Below is a trend plot with a period of 10 years where we can see the gradual rise in temperature, which becomes more noticeable after 1920 and keeps rising. The rate of the rise appears similar for the two tropical cities while it is a bit lower for the temperate city.
 
 ![](https://github.com/rud-ninja/land_temperature_forecast/blob/main/new_images/10year_trend.png)
 
 **Fig 3: Trend of average land temperature since 1900 over a period of 10 years**
+
+Zooming into the above graph, we can visualise the actual change in temperature with time for the 3 cities. The seasonal nature is most consistent for Calcutta, followed by London and then Rio De Janeiro, for which there are wider variations even within the seasonal changes. This could be the reason why we saw a single peak for the temperature distribution of Rio De Janeiro. This could also mean that the temperature time series of Rio De Janeiro is stationary. In actuality, it is very close to stationary but is not.
 
 ![](https://github.com/rud-ninja/land_temperature_forecast/blob/main/new_images/temperature_vs_time.png)
 
