@@ -1,9 +1,9 @@
 # Title: Forecasting land temperatures from only historical temperature data (univariate) using ARIMA model
 
 ### Objectives:
-1. Exploratory data analysis
-2. Long term forecast (2 years) and short term forecast (6 months)
-3. Comment on the difference in results for long term and short term forecasts
+1. Performed exploratory data analysis
+2. Long term forecast (2 years) and short term forecast (1 year)
+3. Discussed differences in results for long term and short term forecasts
 
 #### Language used:
 Python
